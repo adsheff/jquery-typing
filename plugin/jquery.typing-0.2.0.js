@@ -62,7 +62,8 @@
         }
 
         // listen to regular keypresses
-        $elem.keypress(startTyping);
+        // $elem.keypress(startTyping);
+        $elem.on('input', startTyping);
 
         // listen to backspace and delete presses
         $elem.keydown(function (event) {
@@ -73,6 +74,7 @@
 
         // listen to keyups
         $elem.keyup(stopTyping);
+        
 
         // listen to blurs
         $elem.blur(function (event) {
